@@ -5,7 +5,7 @@
     <a href='https://goreportcard.com/badge/github.com/achannarasappa/ticker'><img src='https://goreportcard.com/badge/github.com/achannarasappa/ticker' alt='Report Card' /></a>
 </p>
 
-<h1 align="center">Ticker</h2>
+<h1 align="center">Stonks</h2>
 <p align="center">
 Terminal stock watcher and stock position tracker
 </p>
@@ -24,48 +24,21 @@ Terminal stock watcher and stock position tracker
 
 Download the pre-compiled binaries from the [releases page](https://github.com/achannarasappa/ticker/releases) and copy to a location in `PATH` or see quick installs below
 
-**homebrew**
 ```
-brew install achannarasappa/tap/ticker
-```
-
 **linux**
 ```sh
-curl -Ls https://api.github.com/repos/achannarasappa/ticker/releases/latest \
+curl -Ls https://api.github.com/repos/rav3ndust/stonks/releases/latest \
 | grep -wo "https.*linux-amd64*.tar.gz" \
 | wget -qi - \
-&& tar -xvf ticker*.tar.gz ticker \
-&& chmod +x ./ticker \
-&& sudo mv ticker /usr/local/bin/
-```
-
-**docker**
-```sh
-docker run -it --rm achannarasappa/ticker
-```
-
-Note: config file can be mounted from the host machine by using a bind mount with `-v ~/.ticker.yaml:/.ticker.yaml`
-
-**snap**
-```sh
-sudo snap install ticker
-```
-
-Note: config file will need to be set with `--config $HOME/ticker.yaml` since Snap does not allow access to dotfiles
-
-### Third-party repositories
-These repositories are maintained by a third-party and may not have the latest versions available
-
-**MacPorts**
-```
-sudo port selfupdate
-sudo port install ticker
+&& tar -xvf stonks*.tar.gz stonks \
+&& chmod +x ./stonks \
+&& sudo mv stonks /usr/local/bin/
 ```
 
 ## Quick Start
 
 ```sh
-ticker -w NET,AAPL,TSLA
+stonks -w NET,AAPL,TSLA,BTC-USD,XMR-USD,ETH-USD,F,T,PEP,MSFT
 ```
 
 ## Usage
@@ -243,3 +216,7 @@ golangci-lint run
 
 * [tickrs](https://github.com/tarkah/tickrs) - real-time terminal stock ticker with support for graphing, options, and other analysis information
 * [cointop](https://github.com/miguelmota/cointop) - terminal UI tracking cryptocurrencies
+
+## Credits
+
+**Stonks** is a fork of **ticker**. 
